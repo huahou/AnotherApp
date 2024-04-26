@@ -41,7 +41,7 @@ jobs:
           path: app/build/reports/tests/testDebugUnitTest/
 
   instrumentation-test:
-    needs: [unit-test]
+#    needs: [unit-test]
     runs-on: macos-latest
 
     steps:
@@ -51,6 +51,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 11
+          distribution: 'adopt'  # Or 'oracle' if using Oracle JDK
 
       - name: Usegradle wrapper
         uses: gradle/wrapper-validation-action@v1
