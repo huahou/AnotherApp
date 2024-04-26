@@ -62,8 +62,16 @@ jobs:
       - name: Build project
         run: ./gradlew clean build
 
+      - name: Launch Emulator (API level 30)
+        uses: reactivecircus/android-emulator-runner@v2  # Replace with latest version
+        with:
+          api-level: 30  # Adjust API level as needed
+          name: my-emulator  # Optional name for emulator
+
       - name: Run Espresso tests
-        run: ./gradlew connectedCheck
+        uses: reactivecircus/android-emulator-runner@v2  # Use the same action again
+        with:
+          command: ./gradlew connectedCheck
 
       - name: Upload test report
         uses: actions/upload-artifact@v2
