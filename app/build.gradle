@@ -50,7 +50,7 @@ android {
 
 sonarqube {
     properties {
-        property "sonar.projectName", "huahou_AnotherApp"
+        property "sonar.projectName", "AnotherApp"
         property "sonar.projectKey", "AnotherApp"
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.tests", ["src/test/java"]
