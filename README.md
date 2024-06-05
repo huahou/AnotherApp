@@ -25,5 +25,5 @@ This app was implemented by following CLEAN architecture:
 3. Analytics: Firebase Analytics / Segment
 4. RemoteConfig: Firebase RemoteConfig / Optimizely
 5. CI/CD: 
-	  *Static code analysis: SonarCube
+*Static code analysis: SonarCube
 6. App update (force / optional)
